@@ -91,21 +91,43 @@ Renamed DC-1-Win2022 server name from WIN-JQ4CP6H0M04 to DC-1.<br />
 
 <br />
 <p align="center">
-<h2>Part 2- Joining client virtual machine to DC-1 domain controller:</h2>
-Logged into Clientvm1 using RDP and attempted to ping the DCvm1's private IP which was unsuccessful as shown below.It failed because no Inbound ICMPv4 rule was created to allow this.<br/>
+<h2>Part 2- Joining client machine to tunetech.local domain:</h2>
+The IP address of the Windows 10 client vm was 10.0.2.15 and default gateway 10.0.2.2 which we would need to change. The deafult gateway should be set to the IP of the Domain Controller DC-1 (10.0.0.1).<br/>
 <p align="center">
-<img src="https://i.imgur.com/TEszJLO.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/CpwooHe.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://i.imgur.com/eyAX9Ao.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> <br />
+ <br />
+ <br />
+ <p align="center">
+We can see that the Windows 10 client machine has connectivity to DC-1.<br/>
+<img src="https://i.imgur.com/dQy5wCL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+ <br />
+ <br />
+ <p align="center">
+ Navigated to System > Advanced system settings > Computer Name > Change. Added tunetech.local domain which was successful.<br />
+<img src="https://i.imgur.com/tKHwZXB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br />
+<img src="https://i.imgur.com/iej6Z4R.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <br />
+ <img src="https://i.imgur.com/ysNxqwg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
 <br />
 <p align="center">
-ICMPv4 Inbound rule was created on DCvm1 <br/>
-<img src="https://i.imgur.com/EWkJYcR.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/> <br />
-<img src="https://i.imgur.com/xgR1w58.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+We can see that the A record was added automatically for the Windows 10 client machine confirming that the DNS server is functioning correctly.<br/>
+<img src="https://i.imgur.com/Dzx7NUH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-<br />
-<p align="center">
-Retried pinging the Domain Controller which was successful confirming connectivity.<br/>
-<img src="https://i.imgur.com/XaAkgTX.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
+ <br />
+ <br />
+ <br />
+ COntinue fixing from here<br />
+ 
+ <br />
+ 
+ 
+ 
+ 
+ 
 <h2>Part 3- Installing Active Directory and Admin Creation:</h2>
 
 <p align="center">
