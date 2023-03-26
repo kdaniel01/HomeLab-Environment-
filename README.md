@@ -60,7 +60,7 @@ Created a new forest with root domain "tunetech.local". Be sure to put in the Ne
 <br />
 <img src="https://i.imgur.com/HxooUEp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-
+<p align="center">
 VM was restarted and as we can see the DNS role has been installed succu.DNS was installed successfully as we were able to ping our domain.<br/>
 <img src="https://i.imgur.com/h5Ok0qS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -70,13 +70,28 @@ VM was restarted and as we can see the DNS role has been installed succu.DNS was
 <br />
 <img src="https://i.imgur.com/1N8J7Xz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
+<br />
+<p align="center">
+Also verified that DC-1-Win2022 vm is now a Domain Controller by running "WMIC COMPUTERSYSTEM GET DOMAINROLE" command. Confirmed the domain role was 5 represents a DC.<br />
+<img src="https://i.imgur.com/TBVMJUA.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://i.imgur.com/kYPXiZ5.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<br />
 
+<p align="center">
+Renamed DC-1-Win2022 server name from WIN-JQ4CP6H0M04 to DC-1.<br />
+<img src="https://i.imgur.com/5YWyW0a.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
+<img src="https://i.imgur.com/GNgbVtP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br />
 
-
+ 
+ 
 
 <br />
 <p align="center">
-<h2>Part 2- Checking for connectivity between Client Virtual Machines and Domain Controller:</h2>
+<h2>Part 2- Joining client virtual machine to DC-1 domain controller:</h2>
 Logged into Clientvm1 using RDP and attempted to ping the DCvm1's private IP which was unsuccessful as shown below.It failed because no Inbound ICMPv4 rule was created to allow this.<br/>
 <p align="center">
 <img src="https://i.imgur.com/TEszJLO.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
