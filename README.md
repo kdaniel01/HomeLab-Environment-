@@ -3,9 +3,8 @@
 
 
 <h2>Description</h2>
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<b>In this project,I deployed and configured an On premises Active Directory in Microsoft Azure using Virtual Machines.
+<b>In this project,I created a lab environment using Windows Server 2022 to set up and configure a fully functioning Active Directory Domain Services as well as a DNS and DHCP server.
 </b>
 
 
@@ -20,16 +19,15 @@
 - <b>Remote Desktop<br />
 
 <h2>Overview </h2>
-- <b>Creating a Windows Server 2022 Virtual Machine with Oracle Virtual Box to be used as a Domain Controller.<br /> 
-- <b>Checking for connectivity between Client Virtual Machines and Domain Controller<br />
-- <b>Installing Active Directory and Admin Creation<br />
-
-
-
-<h2>Part 1- Deploying Resources in Azure:</h2>
+- <b>Part 1- Creating Domain Controller from Windows Server 2022<br />
+- <b>Part 2- Joining client machine to tunetech.local domain<br />
+- <b>Part 3- Installing and configuring DHCP Role on Domain Controller<br />
+ 
+ 
+<h2>Part 1- Creating Domain Controller from Windows Server 2022:</h2>
 
 <p align="center">
-I created a VMs to be used as Domain Controller for an organization called "Tunetech". The VM will be configured with Server Manager. "DC-1-Win2022" was created and Network settings was configured for Adapter 1 to be attached to the Internal Network.<br />
+I created a VM to be used as Domain Controller for an organization called "Tunetech". The VM will be configured with Server Manager. "DC-1-Win2022" was created and Network settings was configured for Adapter 1 to be attached to the Internal Network.<br />
 <img src="https://i.imgur.com/VpLeQSL.png" height="80%" alt="Disk Sanitization Steps"/>
 <br />
 <img src="https://i.imgur.com/zAkGnVh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -85,9 +83,6 @@ Renamed DC-1-Win2022 server name from WIN-JQ4CP6H0M04 to DC-1.<br />
 <br />
 <img src="https://i.imgur.com/GNgbVtP.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-
- 
- 
 
 <br />
 <p align="center">
