@@ -120,44 +120,39 @@ We can see that the A record was added automatically for the Windows 10 client m
  <br />
  <br />
  <br />
- COntinue fixing from here<br />
- 
+<h2>Part 3- Installing and configuring DHCP Role on Domain Controller:</h2>
+
+<p align="center">
+In Server Manager, the following steps were performed- Add roles and features > Check DHCP Server box > Check Restart the destination server automatically if required.This installed the DHCP server role needed.<br/>
+<img src="https://i.imgur.com/NLCS4Qa.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> <br />
+<img src="https://i.imgur.com/CavhOMx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> <br />
+<img src="https://i.imgur.com/OmUEnXH.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> 
  <br />
- 
- 
- 
- 
- 
-<h2>Part 3- Installing Active Directory and Admin Creation:</h2>
+ <br /> 
+<p align="center">
+The DHCP post-install configuration was then performed. Used tunetech admin credentials to authorize the DHCP server in AD DS. <br/>
+<img src="https://i.imgur.com/u69Rwlp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/XuLlyeR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/0RsICMG.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
 
 <p align="center">
-Logged into to DCvm1 and installed Active Directorey Domain Services. Server manager > "Add roles and features" > Check the box for "Active Directory Domain Services" <br/>
-<img src="https://i.imgur.com/G1CgBKh.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/> <br />
-<img src="https://i.imgur.com/ruLMhY0.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/> <br />
-
-<p align="center">
-Then promoted DCvm1 from server to Domain Controller.A new forrest was then configured.<br/>
-<img src="https://i.imgur.com/UXuTINl.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
-<img src="https://i.imgur.com/Bnqe9Ct.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
-
+Set the duration for the scope leases to 180 days. The Default Gateway was set to 10.0.0.60. <br/>
+<img src="https://i.imgur.com/8GWQRMt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/aWY8Kl9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/T2bxdpW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/9FtWTIB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
 
  <p align="center">
-Restarted DCvm1 and logged in as user: dannytech.com\azureuser.Then launched Active Directory Users and Computers.<br/>
-<img src="https://i.imgur.com/MTw8h31.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The DHCP server was then restarted for the configurations to be applied. The windows 10 client machine IPv4 settings were changed to automatically obtain an IP and DNS server address. Verified that the DHCP server assigned an IP from the pool to this client machine which it did(10.0.0.10).<br/>
+<img src="https://i.imgur.com/ZJHLtOl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/szvQCwO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/mvSZkQp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/ZGazPh8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/H7axNwi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<br />
 <br />
 
-
-<p align="center">
-Created a Organizational Units titled "EMPLOYEES"and "ADMINS". Then created an admin user for the "ADMINS" OU.<br/>
-<img src="https://i.imgur.com/LNqBSqa.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
- <img src="https://i.imgur.com/nVBc650.jpg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
  
- <p align="center">
-This admin user was added to the "Domain Admins" Security Group.<br/>
-<img src="https://i.imgur.com/LerYnEM.jpeg" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
 
 <!--
  ```diff
