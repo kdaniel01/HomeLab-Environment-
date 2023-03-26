@@ -145,9 +145,9 @@ Set the duration for the scope leases to 180 days. The Default Gateway was set t
  <p align="center">
 The DHCP server was then restarted for the configurations to be applied. The windows 10 client machine IPv4 settings were changed to automatically obtain an IP and DNS server address. Verified that the DHCP server assigned an IP from the pool to this client machine which it did(10.0.0.10).<br/>
 <img src="https://i.imgur.com/ZJHLtOl.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
-<img src="https://i.imgur.com/szvQCwO.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/aoOYjJF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
 <img src="https://i.imgur.com/mvSZkQp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
-<img src="https://i.imgur.com/ZGazPh8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
+<img src="https://i.imgur.com/4bAsIEV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
 <img src="https://i.imgur.com/H7axNwi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/><br />
 <br />
 <br />
