@@ -16,7 +16,6 @@
 - <b>Active Directory Domain Services<br />
 - <b>DNS Services<br />
 - <b>DHCP Services<br />
-- <b>Remote Desktop<br />
 
 <h2>Overview </h2>
 - <b>Part 1- Creating Domain Controller from Windows Server 2022<br />
